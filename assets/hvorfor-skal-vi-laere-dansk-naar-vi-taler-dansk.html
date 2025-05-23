@@ -1,0 +1,58 @@
+<!-- swords and sandals 2 (classic spil) -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dansk sp&#248;rgsm&#229;l</title>
+  <link rel="stylesheet" href="dark.css">
+  <link rel="icon" type="image/png" href="decals/icon.png">
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const favicons = [
+        "decals/icon.png",
+        "decals/icon2.png",
+        "decals/icon3.png"
+      ];
+
+      const randomIndex = Math.floor(Math.random() * favicons.length);
+      document.querySelectorAll("link[rel='icon']").forEach(el => el.remove());
+      const newFavicon = document.createElement("link");
+      newFavicon.rel = "icon";
+      newFavicon.type = "image/png";
+      newFavicon.href = favicons[randomIndex];
+      document.head.appendChild(newFavicon);
+    })
+  </script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    body.fade-in {
+      opacity: 1;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <iframe src="https://y8.com/embed/swords_and_sandals_2" allowfullscreen sandbox="allow-scripts allow-same-origin"></iframe>
+  <li id="hjem"><a href="index.html">Hjem</a></li>
+  <script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("fade-in");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>devlog</title>
+    <link rel="stylesheet" href="devlog.css">
+    <link rel="icon" type="image/png" href="decals/icon.png">
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+        const favicons = [
+            "decals/icon.png",
+            "decals/icon2.png",
+            "decals/icon3.png"
+        ];
+
+        const randomIndex = Math.floor(Math.random() * favicons.length);
+        document.querySelectorAll("link[rel='icon']").forEach(el => el.remove());
+        const newFavicon = document.createElement("link");
+        newFavicon.rel = "icon";
+        newFavicon.type = "image/png";
+        newFavicon.href = favicons[randomIndex];
+        document.head.appendChild(newFavicon);
+        })
+    </script>
+    <style>
+        body {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        body.fade-in {
+            opacity: 1;
+        }
+
+        body.fade-out {
+            opacity: 0;
+            transition: opacity 0.35s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- mit kode er lort (måske)😭😭 -->
+    <div id="hjem"><a href="index.html">Hjem</a></div>
+    <h1>Devlog;</h1>
+    <h4 id ="underdevlog">du er en nørd, hvis du er her.</h4>
+    <!-- 0.12 -->
+    <h2>0.12;</h2>
+    <h3 id="fix">+ Skifter "/assets/index.html" til "/" (eller /index.html)</h3>
+    <h3>/index.html;</h3>
+    <h3 id="under">+ Lyd effekts på hover ved teksten</h3>
+    <h3 id="under">+ Skip knap for musikken</h3>
+    <h3 id="under">+ Skip knap har også lyd effekt ved tryk</h3>
+    <h3 id="under">+ Tilføj flere tekst til titlen</h3>
+    <h3 id="under">+ baggrund er nu lidt lysere (#121212 til #212121)</h3>
+    <h3 id="under">+ Nyheder knap ved /index.html og /assets/swf/swf.html og /assets/MC/mc.html</h3>
+    <h3>+ Musik;</h3>
+    <h3 id="under">+ Hygger mig pt. 2 - KESI, Gilli</h3>
+    <h3>+ menu for SWF spil;</h3>
+    <h3 id="under">+ Happy Wheels</h3>
+    <h3 id="under">+ Bloons Tower Defense 5</h3>
+    <h3 id="under">+ Duck Life 3</h3>
+    <h3 id="under">+ Escaping the Prison</h3>
+    <h3 id="under">+ Swords and Souls</h3>
+    <h3>+ menu for flere MC versioner;</h3>
+    <h3 id="under">+ Minecraft 1.5.2</h3>
+    <h3 id="under">+ Minecraft 1.8.8</h3>
+
+    <!-- 0.11 -->
+    <h2>0.11;</h2>
+    <h3>+ Musik ved /assets/index.html;</h3>
+    <h3 id="under">+ Storebror - Noah Carter</h3>
+    <h3 id="under">+ E.T.A - KESI, Gilli</h3>
+    <h3 id="under">+ Baku - KESI, ICEKID</h3>
+    <h3 id="under">+ Signaler - MAS, Kundo</h3>
+    <h3 id="under">+ Overlay for at få lyd.</h3>
+    <h3>+ tung tung tung sahur (titlen ved /assets/index.html)</h3>
+    <h3>+ Random ikoner/favicons</h3>
+
+    <!-- 0.10 -->
+    <h2>0.10;</h2>
+    <h3>+ Moto X3M</h3>
+    <h3>+ Fill Maze</h3>
+    <h3 id="måske">? Fade ind og ud virker ikke noget gange</h3>
+
+    <!-- 0.9 -->
+    <h2>0.9;</h2>
+    <h3>+ Lyd effekts;</h3>
+    <h3 id="under">+ Lyd effekts til Links og titlen i index.html</h3>
+    <h3>+ Icon</h3>
+    <h3>+ Devlog farver</h3>
+    <h3 id="under">grøn er ny</h3>
+    <h3 id="lortunder">rød er fjern lort</h3>
+    <h3 id="fixunder">blå er fixet lort</h3>
+    <h3 id="måskeunder">lilla kan måske blev fixet/fjerne i næste opdatering</h3>
+    <h3>+ På /html/index.html;</h3>
+    <h3 id="under">+ kan man trykke på titlen for at få en ny tekst</h3>
+    <h3 id="under">+ titlen bliver stor, hvis din mus er på det.</h3>
+    <h3 id="fix">+ /html til /assets</h3>
+    <h3 id="fix">+ fixet den grå lorte linje i devlog</h3>
+    <h3 id="lort">- fjernede de lorte grammatikfejl 🥀🥀</h3>
+
+    <!-- 0.8 -->
+    <h2>0.8;</h2>
+    <h3>+ CSS magi;</h3>
+    <h3 id="under">+ Fade ind animation</h3>
+    <h3 id="under">+ Fade ud animation</h3>
+    <h3 id="under">+ Linksene ser sejere ud 😎</h3>
+    <h3>+ Hjem-knap på hver side (undtagen html/index.html)</h3>
+
+    <!-- 0.7 -->
+    <h2>0.7;</h2>
+    <h3>+ Devlog</h3>
+    <h3>+ Break The Tower!</h3>
+    <h3>+ physics geam</h3>
+    <h3>+ Dreader</h3>
+    <h3>+ Random Text ved /html/index.html</h3>
+    
+    <!-- tak wikipedia -->
+    <h2>&#8196;</h2>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const url = this.href;
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+            window.location.href = url;
+        }, 350);
+        });
+    });
+    </script>
+    <script>
+        window.addEventListener("load", () => {
+            document.body.classList.add("fade-in");
+        });
+    </script>
+</body>
+</html>

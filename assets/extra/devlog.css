@@ -1,0 +1,168 @@
+/*det her er noget lort*/
+
+body {
+    font-family: monospace;
+    background-color: #212121;
+    transition: opacity 0.5s ease;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+h1 {
+    font-size: 5em;
+    color: rgb(0, 205, 219);
+    font-family: monospace;
+    margin-bottom: -0.6em;
+    padding: 0.5em;
+}
+
+h2 {
+    color: white;
+    font-family: monospace;
+    margin-bottom: -0.3em;
+    font-size: 2em;
+}
+
+h3 {
+    color: rgb(45, 255, 146);
+    font-family: monospace;
+    margin-bottom: -0.6em;
+    margin-left: 1em;
+}
+
+h4 {
+    color: rgb(5, 165, 0);
+    font-family: monospace;
+}
+
+#underdevlog {
+    color: #333333;
+    margin-bottom: 3em;
+    margin-top: -5em;
+    border-bottom: 5px solid grey;
+    padding: 2.5em;
+}
+
+#under {
+    color: rgb(45, 255, 146);
+    font-family: monospace;
+    margin-bottom: -0.6em;
+    margin-left: 6em;
+    font-size: 1.05em;
+}
+
+li {
+    margin: 0.5em 0;
+}
+
+#lort {
+    color: #ee0f00
+}
+
+#fix {
+    color: #00a2ff
+}
+
+#måske {
+    color: #7500e3
+}
+
+#lortunder {
+    color: #ee0f00;
+    font-family: monospace;
+    margin-bottom: -0.6em;
+    margin-left: 6em;
+    font-size: 1.05em;
+}
+
+#fixunder {
+    color: #00a2ff;
+    font-family: monospace;
+    margin-bottom: -0.6em;
+    margin-left: 6em;
+    font-size: 1.05em;
+}
+
+#måskeunder {
+    color: #7500e3;
+    font-family: monospace;
+    margin-bottom: -0.6em;
+    margin-left: 6em;
+    font-size: 1.05em;
+}
+
+#hjem {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    font-family: monospace;
+    color: #00aeff;
+    opacity: 0.8;
+}
+
+#hjem a {
+    color: #00aeff;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    font-size: 1.5em;
+    transition: 0.1s all;
+}
+
+#hjem a::before {
+    margin-right: 0.4em;
+    color: #ffffff;
+    content: "";
+    transition: content 0.1s ease;
+}
+
+#hjem a:hover::before {
+    content: "🏠";
+    color: #00ff37;
+}
+
+#hjem a:hover {
+    text-decoration: underline;
+    font-size: 2em;
+    font-weight: 900;
+    color: #00e1ff;
+}
+
+a {
+    color: #00a2ff;
+    text-decoration: none;
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 1.5em;
+    transition: 0.1s all;
+    position: relative;
+}
+
+a::before {
+    margin-right: 0.4em;
+    color: #ffffff;
+    content: "";
+    transition: content 0.1s ease;
+}
+
+a:hover::before {
+    content: "→";
+    color: #00ff37;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-size: 2em;
+    font-weight: 900;
+    color: #00e1ff;
+}

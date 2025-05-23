@@ -1,0 +1,214 @@
+/* dark.css */
+body {
+  background-color: #212121;
+  color: #ffffff;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+  padding: 2em;
+  transition: opacity 0.5s ease;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 0em;
+}
+
+h1::before {
+  content: "";
+  font-size: 1.3em;
+  color: #888;
+  transition: 0.4s all ease;
+}
+
+
+h1:hover::before {
+  font-size: 2em;
+  color: #fff;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  transition: 0.4s all ease;
+}
+
+h4 {
+  color: #333333;
+  margin-bottom: 3em;
+  margin-top: 0em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 0.5em 0;
+}
+
+a {
+  color: #00a2ff;
+  text-decoration: none;
+  font-family: monospace;
+  font-weight: 600;
+  font-size: 1.5em;
+  transition: 0.1s all;
+  position: relative;
+}
+
+/* Add bullet on hover */
+
+#links::before {
+  margin-right: 0.4em;
+  color:#ffffff;
+  content: "•";
+  transition: content 0.1s ease;
+}
+
+a::before {
+  margin-right: 0.4em;
+  color:#ffffff;
+  content: "";
+  transition: content 0.1s ease;
+}
+
+#links:hover::before {
+  content: "→";
+  color: #00ff37;
+  font-weight: 900;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-size: 2em;
+  font-weight: 900;
+  color: #00e1ff;
+}
+
+#devlog {
+  color: transparent;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  font-size: 0.9em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0.8;
+}
+
+#devlog::before {
+  content: "";
+  color: #888;
+}
+
+#devlog:hover::before {
+  content: "📜";
+  font-size: 1.3em;
+  text-decoration: wavy;
+  color: #fff;
+}
+
+#nyheder {
+  color: transparent;
+  position: fixed;
+  bottom: 30px;
+  right: 18px;
+  font-size: 0.9em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0.8;
+}
+
+#nyheder::before {
+  content: "";
+  color: #888;
+}
+
+#nyheder:hover::before {
+  content: "📜";
+  font-size: 1.3em;
+  text-decoration: wavy;
+  color: #fff;
+}
+
+#lavet {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+  color: #525252;
+  opacity: 0.8;
+}
+
+#hjem {
+  color: transparent;
+  position: fixed;
+  bottom: 10px;
+  right: 25px;
+  font-size: 0.9em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0.8;
+}
+
+#hjem::before {
+  content: "";
+  color: #888;
+}
+
+#hjem:hover::before {
+  content: "🏠";
+  font-size: 1.3em;
+  text-decoration: wavy;
+  color: #fff;
+}
+
+/*ik rigtig brugt
+button {
+  background-color: transparent;
+  border: 2px solid #00aeff; 
+  color: #ffffff;
+  font-family: monospace;
+  font-size: 1.2em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #00aeff;
+  color: #fff;
+  border-color: #000000;
+}
+
+button:focus {
+  outline: none;
+}
+*/
+
+#bottom-center-text {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px; 
+  z-index: 9999;
+  font-weight: 700;
+}
