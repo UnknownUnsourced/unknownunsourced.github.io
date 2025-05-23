@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <script data-goatcounter="https://tissemand.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <title>Hjem</title>
+  <link rel="stylesheet" href="/assets/dark.css">
+  <link rel="icon" type="image/png" href="/assets/decals/icon.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comic+Neue">
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const favicons = [
+        "/assets/decals/icon.png",
+        "/assets/decals/icon2.png",
+        "/assets/decals/icon3.png"
+      ];
+
+      const randomIndex = Math.floor(Math.random() * favicons.length);
+      document.querySelectorAll("link[rel='icon']").forEach(el => el.remove());
+      const newFavicon = document.createElement("link");
+      newFavicon.rel = "icon";
+      newFavicon.type = "image/png";
+      newFavicon.href = favicons[randomIndex];
+      document.head.appendChild(newFavicon);
+    });
+  </script>
+  <style>
+    body {
+      opacity: 0;
+      transition: opacity 0.35s ease-in-out;
+    }
+
+    body.fade-in {
+      opacity: 1;
+    }
+
+    body.fade-out {
+      opacity: 0;
+    }
+
+    a {
+      color: rgb(161, 60, 255);
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: sans-serif;
+      font-size: 2rem;
+    }
+
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      color: white;
+      font-size: 3rem;
+      font-weight: 900;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 99999;
+      font-family: sans-serif;
+      transition: opacity 0.35s ease-in-out;
+    }
+
+    #overlay.fade-out {
+      opacity: 0;
+    }
+
+    #skip {
+      position: fixed;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 25px;
+      width: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.85s ease-in-out;
+    }
+
+    #skip:hover {
+      transform: translate(-50%, -50%) scale(1.2) rotate(1440deg);
+    }
+
+    #devlog {
+      z-index: 100;
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="overlay">
+    <div id="overlay-text">klik lige for lyd</div>
+  </div>
+  <audio id="lyd1" src="/assets/lyd/lyd1.wav"></audio>
+  <audio id="lyd2" src="/assets/lyd/lyd2.wav"></audio>
+  <audio id="lyd3" src="/assets/lyd/lyd3.wav"></audio>
+  <audio id="lyd4" src="/assets/lyd/select.wav"></audio>
+  <audio id="lyd5" src="/assets/lyd/link.wav"></audio>
+  
+  <audio id="bg-music" autoplay muted></audio>
+  <img id="skip" src="/assets/decals/skip.png" type="image" style="filter:invert(1)" onclick="skipMusik()">
+  <div id="bottom-center-text" onclick="muteEllerumuted()"></div>
+  <h1 id="random-text" onclick="nytext()"></h1>
+  <ul>
+    <li><a id="links" href="/assets/swf/html/happywheels.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('lyd4')">Happy Wheels</a></li>
+    <li><a id="links" href="/assets/swf/html/escapingtheprison.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('lyd4')">Escaping the Prison</a></li>
+    <li><a id="links" href="/assets/swf/html/ducklife3.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('lyd4')">Duck Life 3</a></li>
+    <li><a id="links" href="/assets/swf/html/btd5.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('lyd4')">Bloons Tower Defense 5</a></li>
+    <li><a id="links" href="/assets/swf/html/swordsandsouls.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('lyd4')">Swords and Souls</a></li>
+    <li><a id="links" href="/" style="color: #00a2ff;" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('lyd4')">Tilbage til hjem</a></li>
+  </ul>
+  <li id="devlog"><a href="/assets/extra/devlog.html" style="color: #00a2ff;">devlog</a></li>
+  <li id="nyheder"><a href="/assets/extra/nyheder.html" style="color: #00a2ff;">nyheder</a></li>
+  <h2 id="lavet">lavet af UnknownUnsourced | SWF's af SWFgalaxy | Muligt med ruffle.rs</h2>
+
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const url = this.href;
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+          window.location.href = url;
+        }, 350);
+      });
+    });
+  </script>
+
+  <script>
+    const random_text = [
+      "Happy Wheels er en banger",
+      'Escaping the Prison er bare "perker simulator"',
+      "Duck Life 3 🔛🔝🔥🔥🔥🔥",
+      "faggot"
+    ];
+
+    function stop_lyd_af_ID(ID) {
+      const lyd = document.getElementById(ID);
+      lyd.pause();
+      lyd.currentTime = 0;
+    }
+
+    function spil_lyd_af_ID(ID) {
+      stop_lyd_af_ID(ID)
+      const lyd = document.getElementById(ID);
+      lyd.play();
+    }
+
+    function nytext() {
+      const randomIndex = Math.floor(Math.random() * random_text.length);
+      spil_lyd_af_ID("lyd4");
+      document.getElementById("random-text").textContent = random_text[randomIndex];
+    }
+
+    window.addEventListener("load", () => {
+      document.body.classList.add("fade-in");
+      nytext();
+    });
+  </script>
+
+  <script>
+    function spil_random_kliklyd() {
+      const allelyd = [
+        "lyd1",
+        "lyd2",
+        "lyd3",
+        "lyd4"
+      ]
+      const lydID = Math.floor(Math.random() * allelyd.length);
+      const randomlyd = document.getElementById(allelyd[lydID]);
+      randomlyd.play();
+    }
+  </script>
+
+  <script>
+    const musicfiles = [
+      "https://unknownunsourced.github.io/web-database-assets/data/lyd/1.mp3", // Baku - KESI, ICEKID
+      "https://unknownunsourced.github.io/web-database-assets/data/lyd/2.mp3", // Storebror - Noah Carter
+      "https://unknownunsourced.github.io/web-database-assets/data/lyd/3.mp3", // E.T.A - KESI, Gilli
+      "https://unknownunsourced.github.io/web-database-assets/data/lyd/4.mp3", // Signaler - MAS, Kundo
+      "https://unknownunsourced.github.io/web-database-assets/data/lyd/5.mp3", // Hvor Mine Ben - MAS, milo
+      "https://unknownunsourced.github.io/web-database-assets/data/lyd/6.mp3", // Hygger Mig pt. 2 - KESI, Gilli
+    ]
+
+    const navn = [
+      "Baku - KESI, ICEKID",
+      "Storebror - Noah Carter",
+      "E.T.A - KESI, Gilli",
+      "Signaler - MAS, Kundo",
+      "Hvor Mine Ben - MAS, milo",
+      "Hygger Mig pt. 2 - KESI, Gilli"
+    ]
+
+    let ligenu = 0;
+    let randomIndex = Math.floor(Math.random() * musicfiles.length);
+    ligenu = randomIndex;
+    const musik = document.getElementById("bg-music");
+    const tekst = document.getElementById("bottom-center-text");
+
+    function spilmusik(id) {
+      musik.src = musicfiles[id];
+      musik.play();
+      if (musik.muted) {
+        tekst.textContent = "Spiller nu: " + navn[id];
+      } else {
+        tekst.textContent = "Musikken er muted"
+      }
+    }
+
+    musik.addEventListener("ended", function() {
+      ligenu = (ligenu + 1) % musicfiles.length;
+      spilmusik(ligenu);
+    });
+
+    window.addEventListener("click", function startMusik() {
+      if (musik.paused) {
+        musik.muted = true;
+        musik.volume = 0.15;
+        spilmusik(ligenu);
+        const overlay = document.getElementById("overlay");
+        window.removeEventListener("click", startMusik);
+        musik.pause();
+        document.getElementById("bottom-center-text").textContent = "Musikken er pauset\n(klik mig for at starte musikken)";
+      }
+    });
+
+    function muteEllerumuted() {
+      if (musik.muted) {
+        musik.muted = false;
+        musik.play();
+        document.getElementById("bottom-center-text").textContent = "Spiller nu: " + navn[ligenu];
+      } else {
+        musik.muted = true;
+        musik.pause();
+        document.getElementById("bottom-center-text").textContent = "Musikken er pauset";
+      }
+    }
+
+    function skipMusik() {
+      const skiplyd = document.getElementById("lyd3");
+      skiplyd.play();
+      ligenu = (ligenu + 1) % musicfiles.length;
+      spilmusik(ligenu);
+      musik.muted = false;
+      document.getElementById("bottom-center-text").textContent = "Spiller nu: " + navn[ligenu];
+    }
+
+    window.addEventListener("click", function() {
+      const overlay = document.getElementById("overlay");
+      if (overlay) {
+        overlay.classList.add("fade-out");
+        setTimeout(() => {
+          overlay.remove();
+        }, 350);
+      }
+    });
+  </script>
+</body>
+</html>
