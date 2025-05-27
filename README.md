@@ -7,11 +7,9 @@ Windows:
 ```pwsh
 git clone https://github.com/UnknownUnsourced/unknownunsourced.github.io.git
 cd unknownunsourced.github.io
-.\index.html
 ```
 Linux:
 ```sh
 git clone https://github.com/UnknownUnsourced/unknownunsourced.github.io.git
 cd unknownunsourced.github.io
-./index.html
 ```
