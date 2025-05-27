@@ -6,12 +6,12 @@ På toppen af websiten skulle der være en "< > Code" knap. Tryk på den, og så
 Windows:
 ```pwsh
 git clone https://github.com/UnknownUnsourced/unknownunsourced.github.io.git
-cd web
+cd unknownunsourced.github.io
 .\index.html
 ```
 Linux:
 ```sh
 git clone https://github.com/UnknownUnsourced/unknownunsourced.github.io.git
-cd web
+cd unknownunsourced.github.io
 ./index.html
 ```
