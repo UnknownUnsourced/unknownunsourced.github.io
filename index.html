@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-  <script data-goatcounter="https://tissemand.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <title>Hjem</title>
   <link rel="stylesheet" href="assets/dark.css">
   <link rel="icon" type="image/png" href="assets/decals/icon.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comic+Neue">
+  
   <script>
     window.addEventListener("DOMContentLoaded", () => {
       const favicons = [
-        "assets/decals/icon.png",
-        "assets/decals/icon2.png",
-        "assets/decals/icon3.png"
+        "/assets/decals/icon.png",
+        "/assets/decals/icon2.png",
+        "/assets/decals/icon3.png"
       ];
 
       const randomIndex = Math.floor(Math.random() * favicons.length);
@@ -94,33 +94,33 @@
   <audio id="lyd1" src="assets/lyd/lyd1.wav"></audio>
   <audio id="lyd2" src="assets/lyd/lyd2.wav"></audio>
   <audio id="lyd3" src="assets/lyd/lyd3.wav"></audio>
-  <audio id="lyd4" src="assets/lyd/select.wav"></audio>
+  <audio id="select" src="assets/lyd/select.wav"></audio>
   <audio id="tung" src="assets/lyd/tung.mp3"></audio>
   <audio id="lyd5" src="assets/lyd/link.wav"></audio>
   <audio id="bg-music" autoplay muted></audio>
   <img id="skip" src="assets/decals/skip.png" type="image" style="filter:invert(1)" onclick="skipMusik()">
   <div id="bottom-center-text" onclick="muteEllerumuted()"></div>
   <h1 id="random-text" onclick="nytext()"></h1>
-  <h4>(version: 0.12)</h4>
+  <h4>(version: 0.13)</h4>
   <ul>
-    <li><a id="links" href="assets/MC/mc.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('lyd4')">Minecraft versioner</a></li>
-    <li><a id="links" href="assets/gratis-tyske-ordbog.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('lyd4')">Slope</a></li>
-    <li><a id="links" href="assets/hvorfor-skal-vi-laere-dansk-naar-vi-taler-dansk.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('lyd4')">Swords and Sandals 2</a></li>
-    <li><a id="links" href="assets/hvordan-laver-jeg-en-rigtig-essay.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('lyd4')">Short life 2</a></li>
-    <li><a id="links" href="assets/krus-og-bolle-komma.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('lyd4')">Break The Tower!</a></li>
-    <li><a id="links" href="assets/et-eller-en.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('lyd4')">physics geam (v0.7.3)</a></li>
-    <li><a id="links" href="assets/intetkoen-og-faelleskoen.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('lyd4')">Dreader</a></li>
-    <li><a id="links" href="assets/areal.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('lyd4')">Moto X3M</a></li>
-    <li><a id="links" href="assets/ku-eller-kun.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('lyd4')">Fill Maze</a></li>
-    <li><a id="links" href="assets/swf/swf.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('lyd4')" style="color: rgb(176, 91, 255);">Flash Spil / SWF Spil</a></li>
+    <li><a id="links" href="assets/MC/mc.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('select')">Minecraft versioner</a></li>
+    <li><a id="links" href="assets/gratis-tyske-ordbog.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('select')">Slope</a></li>
+    <li><a id="links" href="assets/hvordan-laver-jeg-en-rigtig-essay.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('select')">Short life 2</a></li>
+    <li><a id="links" href="assets/krus-og-bolle-komma.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('select')">Break The Tower!</a></li>
+    <li><a id="links" href="assets/et-eller-en.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('select')">physics geam (v0.7.3)</a></li>
+    <li><a id="links" href="assets/intetkoen-og-faelleskoen.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('select')">Dreader</a></li>
+    <li><a id="links" href="assets/areal.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('select')">Moto X3M</a></li>
+    <li><a id="links" href="assets/ku-eller-kun.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('select')">Fill Maze</a></li>
+    <li><a id="links" href="assets/swf/swf.html" onclick="spil_lyd_af_ID('lyd5')" onmouseover="spil_lyd_af_ID('select')" style="color: rgb(176, 91, 255);">Flash Spil / SWF Spil</a></li>
   </ul>
-  <li id="devlog"><a href="assets/extra/devlog.html">devlog</a></li>
-  <li id="nyheder"><a href="assets/extra/nyheder.html">nyheder</a></li>
+  <li id="devlog"><a href="assets/extra/devlog.html" style="color: #525252">devlog</a></li>
+  <li id="nyheder"><a href="assets/extra/nyheder.html" style="color: #525252">nyheder</a></li>
   <h2 id="lavet">lavet af UnknownUnsourced</h2>
 
   <script>
     document.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', function(e) {
+      link.addEventListener('click', async function(e) {
+        await sleep(250); // fix til "? Fade ind og ud virker ikke noget gange (0.10)"???
         e.preventDefault();
         const url = this.href;
         document.body.classList.add('fade-out');
@@ -132,11 +132,15 @@
   </script>
 
   <script>
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
     const random_text = [
       "spiller du i timen!?",
       "vidste ikke du kunne få minecraft på din browser",
       "hvor fandt du denne website???",
-      "må jeg tis i din mund???????????",
+      "må jeg tis' i din mund???????????",
       '"vi spiller fortnite. vi spiller all day, all night."',
       "andreas odbjerg er ik' min yndlings",
       "fuck de socialdemokratier.",
@@ -148,7 +152,9 @@
       '"klik lige for lyd"',
       "ts pmo🥀🥀🥀",
       "🚡🚡🚡🚡🚡🚡🚡",
-      "aldrig lær koding, brormand"
+      "aldrig lær koding, brormand",
+      "firefox er fucking lort",
+      "chromebooks er bare noget."
     ];
 
     function stop_lyd_af_ID(ID) {
@@ -169,12 +175,13 @@
       if (randomIndex === 10) {
         spil_lyd_af_ID("tung");
       } else {
-        spil_lyd_af_ID("lyd4");
+        spil_lyd_af_ID("select");
       }
       document.getElementById("random-text").textContent = random_text[randomIndex];
     }
 
-    window.addEventListener("load", () => {
+    window.addEventListener("load", async () => {
+      await sleep(250); // fix til "? Fade ind og ud virker ikke noget gange (0.10)"???
       document.body.classList.add("fade-in");
       nytext();
     });
@@ -186,7 +193,7 @@
         "lyd1",
         "lyd2",
         "lyd3",
-        "lyd4"
+        "select"
       ]
       const lydID = Math.floor(Math.random() * allelyd.length);
       const randomlyd = document.getElementById(allelyd[lydID]);
@@ -195,13 +202,15 @@
   </script>
 
   <script>
+    // får musik fra database
     const musicfiles = [
       "https://unknownunsourced.github.io/web-database-assets/data/lyd/1.mp3",
       "https://unknownunsourced.github.io/web-database-assets/data/lyd/2.mp3",
       "https://unknownunsourced.github.io/web-database-assets/data/lyd/3.mp3",
       "https://unknownunsourced.github.io/web-database-assets/data/lyd/4.mp3",
       "https://unknownunsourced.github.io/web-database-assets/data/lyd/5.mp3",
-      "https://unknownunsourced.github.io/web-database-assets/data/lyd/6.mp3",
+      "https://unknownunsourced.github.io/web-database-assets/data/lyd/6.mp3"
+      // "https://unknownunsourced.github.io/web-database-assets/data/lyd/7.mp3",
     ]
 
     const navn = [
@@ -211,6 +220,7 @@
       "Signaler - MAS, Kundo",
       "Hvor Mine Ben - MAS, milo",
       "Hygger Mig pt. 2 - KESI, Gilli"
+      // "Decimaler - Kundo"
     ]
 
     let ligenu = 0;
@@ -230,6 +240,7 @@
     }
 
     musik.addEventListener("ended", function() {
+      // ↓↓ forstår ikke; tak random tysker ↓↓
       ligenu = (ligenu + 1) % musicfiles.length;
       spilmusik(ligenu);
     });
@@ -267,9 +278,10 @@
       document.getElementById("bottom-center-text").textContent = "Spiller nu: " + navn[ligenu];
     }
 
-    window.addEventListener("click", function() {
+    window.addEventListener("click", async function() {
       const overlay = document.getElementById("overlay");
       if (overlay) {
+        await sleep(250); // fix til "? Fade ind og ud virker ikke noget gange (0.10)"???
         overlay.classList.add("fade-out");
         setTimeout(() => {
           overlay.remove();
